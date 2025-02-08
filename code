@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="iu">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mice and images</title>
+		<meta name="description" content="Mice and images assignment">
+		<meta name="author" content="-krizzy-">
+		<!--
+			Change log:
+				Created:	24. November 2015									- Drapak
+				Modified:	4. May 2017			- reworked for better style		- Drapak
+							3. January 2025 	- cooking 						- krih
+				Finished:	
+		-->
+        <style>
+            img {
+                position: absolute;
+  				top: 100px; 
+            }
+
+            img, td { 
+                width: 102px;
+                height: 101px;               
+            }
+
+			body {
+				background-color: #FAD6DF;
+			}
+
+			button {
+				background-color: #FAD6DF;
+				color:  #BF739D;
+				border:   2px solid #BF739D;				
+			}
+
+			h1 {
+				color:  #BF739D;				
+			}
+
+			p {
+				position: absolute; 
+				top: 130px;
+				left: 108px;
+				color:  #BF739D;				
+			}
+
+			#outputId {
+				color:  #BF739D;	
+			}
+
+        </style>
+    </head>
+
+	<body>
+		<!--
+			Use object oriented programming to create new images using mouse positions.
+			
+			
+			Make it your own!
+				Decide how much or how little you want to take on in this assignment. 
+				For example, you could simply add the missing code to the example on the 
+				assignment webpage.
+				
+				Or, you could do something else...
+				
+				To succeed you have to:
+
+					[-]	Listen for mouse events with document.onmousemove
+					[-]	Read the mouse position with .clientX and .clientY
+					[-]	Create images using document.createElement("img")
+					[-]	Add images inside an ID using 
+						document.getElementById( ).appendChild( )
+						
+------------STYLE GUIDE FOR LONG LINES: DO NOT PASS COLUMN 95 -------------------------------|			
+		-->
+
+		<h1>Ả̸̠̯͍̣͎̩̯̓̒̓̈́̂͛̇̾̌͜͝l̵͙̭͎̪̟̜̗͉̯̥̝̟͍̊̏͋̾̓̄͆͂͐̕͜͝l̵̝̲͎͗̄̈́ ̵̧͕͚̀̆̈́ ̸̘̥̠̞̝̦͍̦̈́̏͠ ̴̨̧̡͚̭̮̤̯͌̈́͗̂̈́́͂̏ḥ̴̥͙̮̱͚̙̹̩̖͎̤̳͕͐̎͛̈́̑̑̎̿̓̃̑̽͌̕ȧ̸̡̧̧̺̺̲͖̩̬͉̞̓̑̒͌̓͋̏̈́̽͠͝ͅi̸͙̭̣̦̲͕̰̗̩̙͗͝l̴̨̛͇̅̈͗̊͋̆͗̀́͌̓́̽͘ ̸̡̜͉̺͈̳̭̱̬͇̙͔̭̫̉̂̈́̾͑̋̃͘͜͝ ̴̝̞̦̙̺͎̼̥̟̋̃͜ ̴̢͉̤͙̰̱̪̪̫̟̟͔̗̪͇͐̚͝t̶̪̻̙̰͂̒͊͂̆̓͑̍͌͋̽͋̔͠͠h̵̨̯̼͎̘̣̘̫͓̘͕̦̊̈́͊̏́̋e̸̘̟̼̓̊̀ ̸̩͔̟̲͒̉̊́̂̓̎͆̐̔͑̇̉͝ ̴̬̹̞̣͓̖̿͒ ̷̹̯͇̣̮̝̐̃̽͊͛̑̀̏͒̎ͅ.̴͕͗̄͂̒̀̓̋͋̾̀̐͠.̴̳̏̿̽̈́̐́̆̇͠.̴̨̲͈̝͕̩͍̰̹̪̭͚̗͗͒͌͌́̊̿͐͜ͅ ̶̧̧̧̜̫͇̱̼̪̘̮͇̀̀̔́̅͌͋̓̅̊̌̉̚͘ͅ ̵͖͈͇͎́̉̅̎̀̀͂͋̉ ̵̬̈͗͋̑̈́͛̏͋̿̚͝͝ ̴̧̨̤̖̟̙̫̟͍̣̞̣̦̉̓̃̾͆͂͗̂̕͘̕̚͠ ̷̛̠̥͉̟͖͓̼̖͚͇̱̘͆͒̓̅͗̌C̵̹̭͈̽͘ó̷̪̹͖̝͚̤͕͋̓͊̂̉̆̊̈́͌̀̐͐̄͝c̶͍̞̠̩͔̓̍̊͒k̶̡͓̰̫͙̰̻͕͇̣͛́̐̈́͛͆̉̓̀̑̚̚͝r̵̤̭͍̲͆ǫ̵͓̲͈̪̝̦́͠a̴̢̦͍̽̽̉͆̈͐̈́͘c̷͇͕̝̲̬̲͖͎̜͔̰͖̻͊͘͝ḫ̷̖̼͔̓̈́̿̄̎̂̈͗͠͠ ̵̧̗̲͚͈̦̦̪̥̻̞̌͗͑̅͂̃̚͘ ̵͉̖̞̠͇̿̎́͋͝ ̵̢̮̙̺̱͔̼̥͂͑̎̓̆͋̉͐̓̽̓̏͠͝K̷̛̦̩̥͎̯̬̙̮̠͖͐̓͑̀̏ị̶̡̱̤̲̦̀͋̈̍̒̈́̄̑̿̓̈́n̵̢̧͕͙̺͔̠͕͙̖̰͔̲̠̓͌̿͂g̶̭͉̼̞͒̓̑̀̅̎͗̄͝</h1>     
+
+
+
+
+ 		<p>
+            top position on the page: <span id="topId"></span><br>
+            left position on the page: <span id="leftId"></span><br>
+            <button id="buttonId">Click to begin your new hellscape :3</button>            
+        </p>
+        <div id="outputId"></div>
+        <img id="imageId" src="https://fearandhunger.wiki.gg/images/9/9e/12.png">
+        
+ 		<script>
+
+		//INIT: set up the mouseObj's properties
+            var mouseObj = {
+                // current top and left position of the mouse, in px
+                top: 0, 
+                left: 0, 
+                
+                // make the current image be a star
+                currentSrc: "https://fearandhunger.wiki.gg/images/9/9e/12.png",
+            };
+            
+            // mouseObj methods:
+            //      .getCurrentPosition()
+            //      .displayPosition()
+            //      .moveImage()
+            //      .placeImage()
+            //      .cleanUpTheScreen()
+            //      .outputInstructions()
+            //
+        //INPUT: get the current position returned by the mouse event
+            mouseObj.getCurrentPosition = function ( event ) {
+                //console.log( 'in mouseObj.getCurrentPosition...' );
+                this.top    = event.clientY;
+                this.left   = event.clientX;
+            };
+
+        //OUTPUT: display the current mouse position
+            mouseObj.displayPosition = function () {
+                //console.log( 'in mouseObj.displayPosition...' );
+
+                document.getElementById('topId').innerHTML  = this.top;
+                document.getElementById('leftId').innerHTML = this.left;
+            };
+
+        //OUTPUT: move the star to the current mouse position
+            mouseObj.moveImage = function () {
+                //console.log( 'in mouseObj.moveImage...' );
+            
+                var imageStyle  = document.getElementById('imageId').style;
+                imageStyle.top  = this.top + 'px';
+                imageStyle.left = this.left + 'px';
+            };
+
+        //OUTPUT: add a new image to the outputID
+            mouseObj.placeImage = function () {
+                //console.log( 'in mouseObj.placeImage...' );
+
+                var newImage        = document.createElement("img");
+                newImage.src        = this.currentSrc ;
+                newImage.style.top  = this.top + 'px';
+                newImage.style.left = this.left + 'px';
+                
+                document.getElementById( 'outputId' ).appendChild( newImage );
+            };
+            
+        //OUTPUT: empty out the contents of #outputID
+            mouseObj.cleanUpTheScreen = function () {
+                //console.log( 'in mouseObj.cleanUpTheScreen...' );
+                
+                document.getElementById( 'outputId' ).innerHTML = "";
+            };
+
+                        
+        //OUTPUT: output instructions
+            mouseObj.outputInstructions = function () {
+                //console.log( 'in mouseObj.outputInstructions...' );
+                
+                document.getElementById( 'outputId' ).innerHTML = "Click anywhere to stop...";
+            };
+
+            
+        //INPUT EVENTS
+            //
+            //INPUT EVENT: whenever the mouse is clicked
+            document.onmousedown = function () {
+                //console.log( 'onmousedown...' );
+                
+                mouseObj.cleanUpTheScreen();
+                
+                //INPUT EVENT: turn off the effects of moving the mouse
+                document.onmousemove = '';
+            }
+            
+            //INPUT EVENT: when #buttonId is clicked
+            document.querySelector( "#buttonId" ).onclick = function () {
+                //console.log( '#buttonId.onclick...' );
+                
+                //INPUT EVENT: whenever the mouse moves, draw a star        
+                document.onmousemove = function ( event ) {
+                    mouseObj.getCurrentPosition( event );
+                    mouseObj.displayPosition();
+                    mouseObj.moveImage();
+                    mouseObj.placeImage();
+                }
+                
+                mouseObj.outputInstructions();
+            }
+
+
+		</script>
+	</body>
+</html>
